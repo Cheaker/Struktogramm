@@ -41,6 +41,7 @@ public class Interpreter implements StructVisitor {
 
     @Override
     public void visitLessThanConditional(LessThanConditional c) {
+
         if (variables.get(c.getVarX()) < variables.get(c.getVarY()) ){
             c.conclusion.accept(this);
         } else{

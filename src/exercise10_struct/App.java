@@ -17,6 +17,10 @@ public class App {
 
 		Interpreter interpreter = new Interpreter();
 
+		JavaConverter converter = new JavaConverter();
+
+		p.accept(converter);
+		System.out.println();
 		p.accept(interpreter);
 
 		interpreter.printVariables();
