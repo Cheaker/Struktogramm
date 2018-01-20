@@ -3,7 +3,7 @@ package exercise10_struct.struct;
 import java.util.Iterator;
 import java.util.List;
 
-public class Sequence implements Struct {
+public class Sequence implements Struct , Iterable{
 
 	protected List<Struct> children;
 
@@ -15,10 +15,8 @@ public class Sequence implements Struct {
 		iterator = new SequenceIterator(c);
 	}
 
-	public Iterator getIterator() {
-		return iterator.iterator();
+	@Override
+	public Iterator iterator() {
+		return iterator;
 	}
-
-
-
 }

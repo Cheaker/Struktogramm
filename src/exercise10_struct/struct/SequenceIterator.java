@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by Wladimir on 20.01.2018.
  */
-public class SequenceIterator implements Iterable, Iterator{
+public class SequenceIterator implements Iterator{
 
     private final List<Struct> children;
 
@@ -14,10 +14,6 @@ public class SequenceIterator implements Iterable, Iterator{
         this.children = c;
     }
 
-    @Override
-    public Iterator iterator() {
-        return children.iterator();
-    }
 
     @Override
     public boolean hasNext() {
