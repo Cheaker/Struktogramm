@@ -19,4 +19,9 @@ public class Sequence implements Struct , Iterable{
 	public Iterator iterator() {
 		return iterator;
 	}
+
+	@Override
+	public void accept(StructVisitor s) {
+		s.visitSequence(this);
+	}
 }

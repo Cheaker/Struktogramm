@@ -18,5 +18,9 @@ public class LessThanConditional extends Conditional {
 	public String getVarY() {
 		return varY;
 	}
-	
+
+	@Override
+	public void accept(StructVisitor s) {
+		s.visitLessThanConditional(this);
+	}
 }

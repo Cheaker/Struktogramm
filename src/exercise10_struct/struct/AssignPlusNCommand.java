@@ -12,5 +12,10 @@ public class AssignPlusNCommand extends AssignCommand {
 
 	public int getN() {
 		return n;
-	}	
+	}
+
+	@Override
+	public void accept(StructVisitor s) {
+		s.visitAssignPlusOneCommand(this);
+	}
 }
